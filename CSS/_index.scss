@@ -1,0 +1,142 @@
+@import "mixins";
+@import "variables";
+@import "buttons";
+@import "title";
+
+.subheader {
+    background-color: $medium-grey;
+    margin-top: 2px;
+    @include flex-row;
+    height: 3rem;
+    color: $dark-grey;
+    font-weight: bold;
+    z-index: 1;
+    .fas{
+        position: relative;
+        right: 1.6rem;
+        font-size: 1.4rem;
+    }
+}
+
+.nav {
+    background-color: $light-grey;
+    @include flex-column;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    h1{
+        @include title;
+    }
+    .nav_undertitle{
+        font-family: robotothin;
+        font-size: 22px;
+        color: $dark-grey;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    .nav_btn{
+        @include button;
+        margin-bottom: 60px;
+    }
+}
+aside{
+    @include flex-column;
+    padding: 20px 20px 20px 40px;
+
+    h1{
+        @include title;
+    }
+
+    .fonctio{
+        @include box-shadow;
+        @include flex-row;
+        @include margin-bottom;
+        justify-content: flex-start;
+        background-color: $light-grey;
+        width: 100%;
+        height: 80px;
+        border-radius: 22px;
+
+        .fonctio_number{
+            background-color: $primary-color;
+            color: white;
+            border-radius: 30px;
+            height: 30px;
+            width: 30px;
+            @include flex-column;
+            align-items: center;
+            margin-right: 5%;
+            position: relative;
+            right: 15px;
+        }
+        .fonctio_icon{
+            width: 20px;
+            font-size: 25px;
+            color: darken($medium-grey, 30%);
+            margin-right: 7%;
+        }
+        .fonctio_info{
+            @include vignette-title;
+
+        }
+        &:hover{
+            background-color: lighten($primary-color, 30%);
+            .fonctio_icon{
+                color: $primary-color;
+                }
+        }
+    }    
+}
+main{
+    background-color: $light-grey;
+    @include flex-column;
+    padding: $padding;
+    h1{
+        @include title;
+    }
+    .resto-select{
+        height: 300px;
+        width: 100%;
+        background-color: white;
+        @include box-shadow;
+        border-radius: 20px;
+        @include margin-bottom;
+        color: black;
+        .resto-select_img{
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .resto-select_footer{
+            z-index: 1;
+            @include flex-row;
+            justify-content: space-between;
+            padding: 10px;
+            height: 50px;
+            .resto-select_title{
+                @include flex-column;
+                width: 260px;
+                .resto-select_name{
+                    @include vignette-title;
+                    margin: 10px 0 0 0;
+                }
+                .resto-select_location{
+                    margin: 0 0 10px 0;
+                    font-size: 18px;
+                    font-family: robotothin;
+                    font-weight: bold;
+                }
+            }
+            .fa-heart{
+                font-size: 25px;
+                padding-right: 20px;
+                z-index: 3;
+                &:focus{
+                    background-image: linear-gradient(to top right, $secondary-color, $primary-color);
+                }
+            }
+        }
+    }
+}

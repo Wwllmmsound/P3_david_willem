@@ -1,0 +1,361 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: #31302e;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+footer img {
+  width: 100px;
+  -webkit-filter: invert(100);
+          filter: invert(100);
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  margin-bottom: 5px;
+}
+
+footer a i {
+  width: 25px;
+}
+
+footer a:hover {
+  border-bottom: solid 1px white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+  -webkit-box-shadow: 0px 15px 10px -15px;
+          box-shadow: 0px 15px 10px -15px;
+  width: 100%;
+  z-index: 2;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+}
+
+.subheader {
+  background-color: #dad5cb;
+  margin-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  color: #31302e;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.subheader .fas {
+  position: relative;
+  right: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.nav {
+  background-color: #f5f2eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.nav h1 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.nav .nav_undertitle {
+  font-family: robotothin;
+  font-size: 22px;
+  color: #31302e;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.nav .nav_btn {
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
+          box-shadow: 0px 5px 5px 5px #dad5cb;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 20px 20px 40px;
+}
+
+aside h1 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+aside .fonctio {
+  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
+          box-shadow: 0px 5px 5px 5px #dad5cb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #f5f2eb;
+  width: 100%;
+  height: 80px;
+  border-radius: 22px;
+}
+
+aside .fonctio .fonctio_number {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5%;
+  position: relative;
+  right: 15px;
+}
+
+aside .fonctio .fonctio_icon {
+  width: 20px;
+  font-size: 25px;
+  color: #9a8d72;
+  margin-right: 7%;
+}
+
+aside .fonctio .fonctio_info {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+aside .fonctio:hover {
+  background-color: #e4d5f6;
+}
+
+aside .fonctio:hover .fonctio_icon {
+  color: #9356DC;
+}
+
+main {
+  background-color: #f5f2eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px;
+}
+
+main h1 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+main .resto-select {
+  height: 300px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
+          box-shadow: 0px 5px 5px 5px #dad5cb;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+main .resto-select .resto-select_img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .resto-select .resto-select_footer {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  height: 50px;
+}
+
+main .resto-select .resto-select_footer .resto-select_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 260px;
+}
+
+main .resto-select .resto-select_footer .resto-select_title .resto-select_name {
+  font-weight: bold;
+  font-size: 19px;
+  margin: 10px 0 0 0;
+}
+
+main .resto-select .resto-select_footer .resto-select_title .resto-select_location {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-family: robotothin;
+  font-weight: bold;
+}
+
+main .resto-select .resto-select_footer .fa-heart {
+  font-size: 25px;
+  padding-right: 20px;
+  z-index: 3;
+}
+
+main .resto-select .resto-select_footer .fa-heart:focus {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

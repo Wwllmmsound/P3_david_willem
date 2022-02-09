@@ -1,0 +1,12 @@
+@import "mixins";
+@import "variables";
+
+@mixin button {
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    @include box-shadow;
+    color: white;
+    background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    font-size: 18px;
+}
