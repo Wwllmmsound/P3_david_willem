@@ -1,0 +1,102 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../components/buttons";
+@import "../components/title";
+@import "../base/typography";
+
+@include img-subheader;
+.menu-form2{
+    height: 1550px;
+}
+.menu-form{
+    z-index: 1;
+    background-color: $light-grey;
+    padding-top: 10px;
+    margin-top: -50px;
+    padding-bottom: -100px;
+    border-radius: 50px 50px 0 0;
+    min-height: 1450px;
+    .resto-name{
+        @include flex-row;
+        padding: $padding;
+        h1{
+            font-family: shrikhand;
+        }
+        i{
+            font-size: 30px;
+            margin-right: 35px;
+        }
+    }
+    input[type="radio"]{
+        appearance: none;
+        &:hover{
+            .menu-choice_details{
+                display: inline;
+                background-color: lighten($tertiary-color, 10%);
+            }
+        }
+        &:focus{
+            .menu-choice_selected{
+                display: inline;
+            }
+        }
+
+    }
+    .menu-type{
+        padding: $padding;
+        @include flex-column;
+        .menu-type_title{
+            font-family: robotothin;
+        }
+        .menu-type_title_underline{
+            width: 50px;
+            height: 4px;
+            background-color: $tertiary-color;
+            margin-top: -15px;
+        }
+        .menu-choices{
+            @include flex-row;
+            background-color: white;
+            border-radius: 20px;
+            @include box-shadow;
+            width: 100%;
+            height: 80px;
+            margin-top: 20px;
+            .menu-choice_details{
+                padding-left: 10px;
+                width: 80%;
+                h4{
+                    position: relative;
+                    top: 8px;
+                    font-size: 22px;
+                }
+                p{
+                    position: relative;
+                    bottom: 14px;
+                    font-family: robotothin;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .menu-choice_price{
+                margin-top: 40px;
+                margin-right: 20px;
+            }
+            .menu-choice_selected{
+                background-color: $tertiary-color;
+                z-index: 4;
+                min-width: 70px;
+                height: 80px;
+                border-radius: 0 20px 20px 0;
+                color: white;
+                display: none;
+            }
+        }
+    }
+    .order-btn{
+        @include button;
+        @include flex-column;
+        margin: 30px 0 50px 28%;
+        padding: 20px 60px;
+    }
+}

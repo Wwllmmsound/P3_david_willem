@@ -1,7 +1,8 @@
-@import "mixins";
-@import "variables";
-@import "buttons";
-@import "title";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../components/buttons";
+@import "../components/title";
+@import "../base/typography";
 
 footer{
     @include flex-column;
@@ -11,6 +12,7 @@ footer{
     margin-bottom: 0;
     @include tablet-size{
         flex-direction: row;
+        padding-right: 20px;
     }
     img{
         width: 100px;

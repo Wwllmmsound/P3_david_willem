@@ -1,13 +1,13 @@
-@import "footer";
-@import "header";
+@import "./layout/footer";
+@import "./layout/header";
 
-@import "index";
-@import "menus";
+@import "./pages/index";
+@import "./pages/menus";
 
-@import "mixins";
-@import "variables";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
-@import "typography";
+@import "./base/typography";
 
-@import "buttons";
-@import "title";
+@import "./components/buttons";
+@import "./components/title";

@@ -1,0 +1,20 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$light-grey: #f5f2eb;
+$medium-grey: #ebe5d9;
+$dark-grey: #31302e;
+
+$light-primary: lighten($primary-color, 10%);
+$light-secondary: lighten($secondary-color, 10%);
+
+$primary-gradiant: linear-gradient(to bottom right, $secondary-color, $primary-color);
+$light-primary-gradiant: linear-gradient(to bottom right, $light-secondary, $light-primary);
+
+$padding: 20px;
+
+$breakpoints: (
+    'medium': 600px,
+    'large': 900px,
+    'huge': 1200px,
+);

@@ -1,0 +1,126 @@
+.subheader-img-1 {
+  background-image: url("../assets/menu1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0; }
+
+.subheader-img-2 {
+  background-image: url("../assets/menu2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0; }
+
+.subheader-img-3 {
+  background-image: url("../assets/menu3.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0; }
+
+.subheader-img-4 {
+  background-image: url("../assets/menu4.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0; }
+
+.menu-form2 {
+  height: 1550px; }
+
+.menu-form {
+  z-index: 1;
+  background-color: #f5f2eb;
+  padding-top: 10px;
+  margin-top: -50px;
+  padding-bottom: -100px;
+  border-radius: 50px 50px 0 0;
+  min-height: 1450px; }
+  .menu-form .resto-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; }
+    .menu-form .resto-name h1 {
+      font-family: shrikhand; }
+    .menu-form .resto-name i {
+      font-size: 30px;
+      margin-right: 35px; }
+  .menu-form input[type="radio"] {
+    appearance: none; }
+    .menu-form input[type="radio"]:hover .menu-choice_details {
+      display: inline;
+      background-color: #c1ede2; }
+    .menu-form input[type="radio"]:focus .menu-choice_selected {
+      display: inline; }
+  .menu-form .menu-type {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly; }
+    .menu-form .menu-type .menu-type_title {
+      font-family: robotothin; }
+    .menu-form .menu-type .menu-type_title_underline {
+      width: 50px;
+      height: 4px;
+      background-color: #99E2D0;
+      margin-top: -15px; }
+    .menu-form .menu-type .menu-choices {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 3px 5px 0px #f5f2eb;
+      width: 100%;
+      height: 80px;
+      margin-top: 20px; }
+      .menu-form .menu-type .menu-choices .menu-choice_details {
+        padding-left: 10px;
+        width: 80%; }
+        .menu-form .menu-type .menu-choices .menu-choice_details h4 {
+          position: relative;
+          top: 8px;
+          font-size: 22px; }
+        .menu-form .menu-type .menu-choices .menu-choice_details p {
+          position: relative;
+          bottom: 14px;
+          font-family: robotothin;
+          font-size: 18px;
+          font-weight: bold; }
+      .menu-form .menu-type .menu-choices .menu-choice_price {
+        margin-top: 40px;
+        margin-right: 20px; }
+      .menu-form .menu-type .menu-choices .menu-choice_selected {
+        background-color: #99E2D0;
+        z-index: 4;
+        min-width: 70px;
+        height: 80px;
+        border-radius: 0 20px 20px 0;
+        color: white;
+        display: none; }
+  .menu-form .order-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0px 3px 5px 0px #f5f2eb;
+    color: white;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 30px 0 50px 28%;
+    padding: 20px 60px; }
+    .menu-form .order-btn:hover {
+      background-image: linear-gradient(to bottom right, #fface8, #ae80e5);
+      cursor: pointer; }
+
+/*# sourceMappingURL=_menus.css.map */

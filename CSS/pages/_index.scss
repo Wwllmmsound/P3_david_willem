@@ -1,12 +1,14 @@
-@import "mixins";
-@import "variables";
-@import "buttons";
-@import "title";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../components/buttons";
+@import "../components/title";
+@import "../base/typography";
 
-.subheader {
+.subheader{
     background-color: $medium-grey;
     margin-top: 2px;
     @include flex-row;
+    justify-content: center;
     height: 3rem;
     color: $dark-grey;
     font-weight: bold;
@@ -18,12 +20,13 @@
     }
 }
 
-.nav {
+.nav{
     background-color: $light-grey;
     @include flex-column;
     align-items: center;
     padding: 10px 40px;
     text-align: center;
+    
     h1{
         @include title;
     }
@@ -42,7 +45,25 @@
 aside{
     @include flex-column;
     padding: 20px 20px 20px 40px;
-
+    @include tablet-size{
+        .aside-head{
+            grid-area: aside-head;
+        }
+        .aside1{
+            grid-area: aside1;
+        }
+        .aside2{
+            grid-area: aside2;
+        }
+        .aside3{
+            grid-area: aside3;
+        }
+        display: grid;
+        grid-template-areas: 
+        "aside-head aside-head aside-head"
+        "aside1 aside2 aside3";
+        grid-gap: 20px;
+    }
     h1{
         @include title;
     }
@@ -56,7 +77,6 @@ aside{
         width: 100%;
         height: 80px;
         border-radius: 22px;
-
         .fonctio_number{
             background-color: $primary-color;
             color: white;
@@ -80,7 +100,7 @@ aside{
 
         }
         &:hover{
-            background-color: lighten($primary-color, 30%);
+            background-color: lighten($primary-color, 35%);
             .fonctio_icon{
                 color: $primary-color;
                 }
@@ -91,6 +111,33 @@ main{
     background-color: $light-grey;
     @include flex-column;
     padding: $padding;
+    @include tablet-size{
+        .main-head{
+            grid-area: main-head;
+        }
+        .menu1{
+            grid-area: menu1;
+            width: 45%;
+        }
+        .menu2{
+            grid-area: menu2;
+            width: 45%;
+        }
+        .menu3{
+            grid-area: menu3;
+            width: 45%;
+        }
+        .menu4{
+            grid-area: menu4;
+            width: 45%;
+        }
+        display: grid;
+        grid-template-areas: 
+        "main-head main-head"
+        "menu1 menu2"
+        "menu3 menu4";
+        grid-gap: 20px;
+    }
     h1{
         @include title;
     }
@@ -102,6 +149,15 @@ main{
         border-radius: 20px;
         @include margin-bottom;
         color: black;
+        .resto-select_new{
+            z-index: 4;
+            position: absolute;
+            right: 40px;
+            margin-top: 20px;
+            padding: 5px 15px;
+            color: darken($tertiary-color, 40%);
+            background-color: $tertiary-color;
+        }
         .resto-select_img{
             border-radius: 20px 20px 0 0;
             width: 100%;
@@ -112,7 +168,6 @@ main{
         .resto-select_footer{
             z-index: 1;
             @include flex-row;
-            justify-content: space-between;
             padding: 10px;
             height: 50px;
             .resto-select_title{
@@ -133,7 +188,7 @@ main{
                 font-size: 25px;
                 padding-right: 20px;
                 z-index: 3;
-                &:focus{
+                &:hover{
                     background-image: linear-gradient(to top right, $secondary-color, $primary-color);
                 }
             }

@@ -1,0 +1,16 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+@mixin button {
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    @include box-shadow;
+    color: white;
+    background-image: $primary-gradiant;
+    font-size: 18px;
+    &:hover{
+       background-image: $light-primary-gradiant;
+       cursor: pointer;
+    }
+}

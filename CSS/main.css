@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url("Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +56,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-right: 20px;
   }
 }
 
@@ -47,16 +80,51 @@ footer a:hover {
   border-bottom: solid 1px white;
 }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url("Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px 0px;
   -webkit-box-shadow: 0px 15px 10px -15px;
           box-shadow: 0px 15px 10px -15px;
@@ -69,18 +137,53 @@ header img {
   height: auto;
 }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url("Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .subheader {
-  background-color: #dad5cb;
+  background-color: #ebe5d9;
   margin-top: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 3rem;
   color: #31302e;
   font-weight: bold;
@@ -132,13 +235,19 @@ header img {
   border: none;
   border-radius: 30px;
   padding: 15px;
-  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
-          box-shadow: 0px 5px 5px 5px #dad5cb;
+  -webkit-box-shadow: 0px 3px 5px 0px #f5f2eb;
+          box-shadow: 0px 3px 5px 0px #f5f2eb;
   color: white;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   font-size: 18px;
   margin-bottom: 60px;
+}
+
+.nav .nav_btn:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fface8), to(#ae80e5));
+  background-image: linear-gradient(to bottom right, #fface8, #ae80e5);
+  cursor: pointer;
 }
 
 aside {
@@ -158,20 +267,50 @@ aside {
   padding: 20px 20px 20px 40px;
 }
 
+@media screen and (min-width: 600px) {
+  aside {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "aside-head aside-head aside-head" "aside1 aside2 aside3";
+    grid-gap: 20px;
+  }
+  aside .aside-head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: aside-head;
+  }
+  aside .aside1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: aside1;
+  }
+  aside .aside2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: aside2;
+  }
+  aside .aside3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: aside3;
+  }
+}
+
 aside h1 {
   font-weight: bolder;
   font-size: 30px;
 }
 
 aside .fonctio {
-  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
-          box-shadow: 0px 5px 5px 5px #dad5cb;
+  -webkit-box-shadow: 0px 3px 5px 0px #f5f2eb;
+          box-shadow: 0px 3px 5px 0px #f5f2eb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -215,7 +354,7 @@ aside .fonctio .fonctio_number {
 aside .fonctio .fonctio_icon {
   width: 20px;
   font-size: 25px;
-  color: #9a8d72;
+  color: #b6a075;
   margin-right: 7%;
 }
 
@@ -225,7 +364,7 @@ aside .fonctio .fonctio_info {
 }
 
 aside .fonctio:hover {
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
 }
 
 aside .fonctio:hover .fonctio_icon {
@@ -250,6 +389,45 @@ main {
   padding: 20px;
 }
 
+@media screen and (min-width: 600px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "main-head main-head" "menu1 menu2" "menu3 menu4";
+    grid-gap: 20px;
+  }
+  main .main-head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: main-head;
+  }
+  main .menu1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: menu1;
+    width: 45%;
+  }
+  main .menu2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: menu2;
+    width: 45%;
+  }
+  main .menu3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: menu3;
+    width: 45%;
+  }
+  main .menu4 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: menu4;
+    width: 45%;
+  }
+}
+
 main h1 {
   font-weight: bolder;
   font-size: 30px;
@@ -259,11 +437,21 @@ main .resto-select {
   height: 300px;
   width: 100%;
   background-color: white;
-  -webkit-box-shadow: 0px 5px 5px 5px #dad5cb;
-          box-shadow: 0px 5px 5px 5px #dad5cb;
+  -webkit-box-shadow: 0px 3px 5px 0px #f5f2eb;
+          box-shadow: 0px 3px 5px 0px #f5f2eb;
   border-radius: 20px;
   margin-bottom: 30px;
   color: black;
+}
+
+main .resto-select .resto-select_new {
+  z-index: 4;
+  position: absolute;
+  right: 40px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  color: #278870;
+  background-color: #99E2D0;
 }
 
 main .resto-select .resto-select_img {
@@ -280,15 +468,12 @@ main .resto-select .resto-select_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   height: 50px;
 }
@@ -329,7 +514,7 @@ main .resto-select .resto-select_footer .fa-heart {
   z-index: 3;
 }
 
-main .resto-select .resto-select_footer .fa-heart:focus {
+main .resto-select .resto-select_footer .fa-heart:hover {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
 }
@@ -345,6 +530,246 @@ main .resto-select .resto-select_footer .fa-heart:focus {
 @font-face {
   font-family: 'robotothin';
   src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url("Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.subheader-img-1 {
+  background-image: url("../assets/menu1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0;
+}
+
+.subheader-img-2 {
+  background-image: url("../assets/menu2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0;
+}
+
+.subheader-img-3 {
+  background-image: url("../assets/menu3.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0;
+}
+
+.subheader-img-4 {
+  background-image: url("../assets/menu4.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  z-index: 0;
+}
+
+.menu-form2 {
+  height: 1550px;
+}
+
+.menu-form {
+  z-index: 1;
+  background-color: #f5f2eb;
+  padding-top: 10px;
+  margin-top: -50px;
+  padding-bottom: -100px;
+  border-radius: 50px 50px 0 0;
+  min-height: 1450px;
+}
+
+.menu-form .resto-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.menu-form .resto-name h1 {
+  font-family: shrikhand;
+}
+
+.menu-form .resto-name i {
+  font-size: 30px;
+  margin-right: 35px;
+}
+
+.menu-form input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.menu-form input[type="radio"]:hover .menu-choice_details {
+  display: inline;
+  background-color: #c1ede2;
+}
+
+.menu-form input[type="radio"]:focus .menu-choice_selected {
+  display: inline;
+}
+
+.menu-form .menu-type {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu-form .menu-type .menu-type_title {
+  font-family: robotothin;
+}
+
+.menu-form .menu-type .menu-type_title_underline {
+  width: 50px;
+  height: 4px;
+  background-color: #99E2D0;
+  margin-top: -15px;
+}
+
+.menu-form .menu-type .menu-choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 3px 5px 0px #f5f2eb;
+          box-shadow: 0px 3px 5px 0px #f5f2eb;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.menu-form .menu-type .menu-choices .menu-choice_details {
+  padding-left: 10px;
+  width: 80%;
+}
+
+.menu-form .menu-type .menu-choices .menu-choice_details h4 {
+  position: relative;
+  top: 8px;
+  font-size: 22px;
+}
+
+.menu-form .menu-type .menu-choices .menu-choice_details p {
+  position: relative;
+  bottom: 14px;
+  font-family: robotothin;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-form .menu-type .menu-choices .menu-choice_price {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.menu-form .menu-type .menu-choices .menu-choice_selected {
+  background-color: #99E2D0;
+  z-index: 4;
+  min-width: 70px;
+  height: 80px;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  display: none;
+}
+
+.menu-form .order-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 3px 5px 0px #f5f2eb;
+          box-shadow: 0px 3px 5px 0px #f5f2eb;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 30px 0 50px 28%;
+  padding: 20px 60px;
+}
+
+.menu-form .order-btn:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fface8), to(#ae80e5));
+  background-image: linear-gradient(to bottom right, #fface8, #ae80e5);
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url("Shrikhand-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
