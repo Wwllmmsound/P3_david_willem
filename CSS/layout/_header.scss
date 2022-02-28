@@ -8,11 +8,23 @@ header{
     @include flex-row;
     justify-content: center;
     padding: 10px 0px;
-    box-shadow: 0px 15px 10px -15px;
+    box-shadow: 0px 0px -10px 5px $dark-grey;
     width: 100%;
     z-index: 2;
+    position: relative;
+    margin-bottom: 10px;
     img{
         width: 200px;
         height: auto;
+    }
+    a{
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        i{
+            text-decoration: none;
+            color: $dark-grey;
+            font-size: 20px;
+        }
     }
 }

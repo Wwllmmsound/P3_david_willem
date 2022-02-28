@@ -5,12 +5,84 @@
     border: none;
     border-radius: 30px;
     padding: 15px;
+    position: relative;
+    z-index: 1;
     @include box-shadow;
     color: white;
     background-image: $primary-gradiant;
     font-size: 18px;
-    &:hover{
-       background-image: $light-primary-gradiant;
-       cursor: pointer;
+    &:hover{  
+        cursor: pointer;
+        &::after{
+            opacity: .7;
+        }
     }
+    &::after{
+        content:"";
+        @include absolute0;
+        background-image: $light-primary-gradiant;
+        box-shadow: 7px 7px 10px $dark-grey;
+        opacity: 0;
+        z-index: 0;
+        border-radius: 30px;
+        transition: opacity 200ms ease-in;
+    }    
+}
+@mixin heart {
+    &:hover{
+        .heart_full{
+            animation: full-heart 1500ms cubic-bezier(.1,1.32,.54,.82) forwards;
+        }
+    }
+    &:not(hover){
+        .heart_full{
+            animation: empty-heart 1500ms cubic-bezier(.1,1.32,.54,.82) forwards;
+        }
+    }
+    // &:active{
+    //     .heart_full{
+    //         animation: full-heart 1500ms cubic-bezier(.1,1.32,.54,.82) forwards;
+    //     }
+    // }
+    .heart_empty{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        opacity: 1;
+        z-index: 1;
+    }
+    .heart_full{
+        position: absolute;
+        opacity: 0;
+        height: 35px;
+        width: 35px;
+        z-index: 2;
+        @keyframes full-heart {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }  
+        }
+        @keyframes empty-heart{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            } 
+        }
+    }
+}
+
+.order-btn{
+    @include button;
+    @include flex-column;
+    padding: 20px 60px;
+    margin-top: 20px;
+}
+.menu_btn{
+    @include flex-row;
+    justify-content: center;
 }

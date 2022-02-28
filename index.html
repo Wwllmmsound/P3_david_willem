@@ -9,20 +9,31 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 </head>
 <body>
+    <div class="container">
+       <div class="loader">
+           <div class="loader--dot"></div>
+           <div class="loader--dot"></div>
+           <div class="loader--dot"></div>
+           <div class="loader--dot"></div>
+           <div class="loader--dot"></div>
+           <div class="loader--dot"></div>
+           <div class="loader--text"></div>
+       </div>
+    </div>
     <header>
-        <a href="index.html"><img src="./assets/ohmyfood.png" alt="logo"></a>
+        <img src="./assets/ohmyfood.png" alt="logo">
     </header>
     <div class="subheader">
         <i class="fas fa-map-marker-alt"></i>
         <span class="location">Paris, Belleville</span>
     </div>
     <nav class="nav">
-        <h1>Réservez le menu qui vous convient</h1>
+        <h2>Réservez le menu qui vous convient</h2>
         <p class="nav_undertitle">Découvrez des restaurant d'exception, séléctionnés pas nos soins.</p>
         <button class="nav_btn">Explorer nos restaurants</button>
     </nav>
     <aside>
-        <h1 class="aside-head">Fonctionnement</h1>
+        <h2 class="aside-head">Fonctionnement</h2>
         <div class="fonctio">
             <div class="fonctio_number aside1"><span>1</span></div>
             <i class="fas fa-mobile-alt fonctio_icon"></i>
@@ -51,7 +62,10 @@
                     <h4 class="resto-select_name">La palette du goût</h4>
                     <p class="resto-select_location">Ménilmontant</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <button class="resto_select-like_btn">
+                    <img class="heart_empty" src="./assets/heart-empty.png" alt="empty heart">
+                    <img class="heart_full" src="./assets/heart-full.png" alt="full heart">
+                </button>
             </figcaption >
         </figure>
         <figure class="resto-select menu2">
@@ -64,7 +78,10 @@
                     <h4 class="resto-select_name">la note enchantée</h4>
                     <p class="resto-select_location">Charonne</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <button class="resto_select-like_btn">
+                    <img class="heart_empty" src="./assets/heart-empty.png" alt="empty heart">
+                    <img class="heart_full" src="./assets/heart-full.png" alt="full heart">
+                </button>
             </figcaption>
         </figure>
         <figure class="resto-select menu3">
@@ -74,7 +91,10 @@
                     <h4 class="resto-select_name">À la française</h4>
                     <p class="resto-select_location">Cité rouge</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <button class="resto_select-like_btn">
+                    <img class="heart_empty" src="./assets/heart-empty.png" alt="empty heart">
+                    <img class="heart_full" src="./assets/heart-full.png" alt="full heart">
+                </button>
             </figcaption>
         </figure>
         <figure class="resto-select menu4">
@@ -84,7 +104,10 @@
                     <h4 class="resto-select_name">Le délice des sens</h4>
                     <p class="resto-select_location">Folie-Méricourt</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <button class="resto_select-like_btn">
+                    <img class="heart_empty" src="./assets/heart-empty.png" alt="empty heart">
+                    <img class="heart_full" src="./assets/heart-full.png" alt="full heart">
+                </button>
             </div>
         </figure>
     </main>
@@ -99,7 +122,7 @@
             <span> Devenir Partenaire</span>
         </a>
         <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a href="mailto:willemdav92@yahoo.fr">Contact</a>
     </footer>
 </body>
 </html>

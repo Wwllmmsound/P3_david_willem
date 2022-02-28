@@ -1,0 +1,131 @@
+@import "../abstracts/variables"; 
+
+
+@mixin loading {
+
+
+.container{
+  height: 300vh;
+  width: 100vw;
+  font-family: Helvetica;
+  background-color: $light-grey;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 10;
+  animation: disapear 2000ms linear forwards;
+.loader{
+  height: $loader-dot--size;
+  width: $loader--width;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  &--dot{
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    height: $loader-dot--size;
+    width: $loader-dot--size;
+    border-radius: 100%;
+    background-color: $dark-grey;
+    position: absolute;
+    border: 2px solid white;
+    &:first-child{
+      background-color: $tertiary-color;
+      animation-delay: 0.5s;
+    }
+    &:nth-child(2){
+      background-color: $primary-color;
+      animation-delay: 0.4s;
+    }
+    &:nth-child(3){
+      background-color: $secondary-color;
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4){
+      background-color: $primary-color;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(5){
+      background-color: $tertiary-color;
+      animation-delay: 0.1s;
+    }
+    &:nth-child(6){
+      background-color: $secondary-color;
+      animation-delay: 0s;
+    }
+} 
+  &--text{
+    position: absolute;
+    top: 250%;
+    left: 0;
+    right: 0;
+    width: 35rem;
+    margin: auto;
+    font-size: 35px;
+    font-family: robotoregular;
+    &:after{
+      content: "En cours de chargement";   
+      font-weight: bold;
+      animation-name: loading-text;
+      animation-duration: 2s;
+    }
+  }
+}  
+@keyframes disapear{
+    15%{
+        opacity: .7;
+        height: 100%;
+      }
+      45%{
+        opacity: .7;
+        height: 100%;
+      }
+      65%{
+        opacity: .7;
+        height: 100%;
+      }
+      95%{
+        opacity: .7;
+        height: 20%;
+      }
+      100%{
+          opacity: 0;
+          z-index: -1;
+          height: 20%;
+      }
+}
+@keyframes loader{
+  15%{
+    transform: translateX(0)
+  }
+  45%{
+    transform: translateX( $loader--width - $loader-dot--size )
+  }
+  65%{
+    transform: translateX( $loader--width - $loader-dot--size )
+  }
+  95%{
+    transform: translateX(0)
+  }
+
+}
+@keyframes loading-text{
+  0%{
+    content: "En cours de chargement"
+  }
+  25%{
+    content: "En cours de chargement."
+  }
+  50%{
+    content: "En cours de chargement.."
+  }
+  75%{
+    content: "En cours de chargement..."
+  }
+
+}
+}
+}

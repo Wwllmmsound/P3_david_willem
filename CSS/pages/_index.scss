@@ -3,7 +3,12 @@
 @import "../components/buttons";
 @import "../components/title";
 @import "../base/typography";
+@import "../components/loading";
 
+@include loading;
+h1{
+    @include title;
+}
 .subheader{
     background-color: $medium-grey;
     margin-top: 2px;
@@ -27,9 +32,6 @@
     padding: 10px 40px;
     text-align: center;
     
-    h1{
-        @include title;
-    }
     .nav_undertitle{
         font-family: robotothin;
         font-size: 22px;
@@ -63,9 +65,7 @@ aside{
         "aside-head aside-head aside-head"
         "aside1 aside2 aside3";
         grid-gap: 20px;
-    }
-    h1{
-        @include title;
+        grid-template-columns: 30% 30% 30%;
     }
 
     .fonctio{
@@ -77,6 +77,13 @@ aside{
         width: 100%;
         height: 80px;
         border-radius: 22px;
+        transition: all 600ms cubic-bezier(.28,2.03,.79,-0.99);
+        &:hover{
+            background-color: lighten($primary-color, 35%);
+            .fonctio_icon{
+                color: $primary-color;
+                }
+        }
         .fonctio_number{
             background-color: $primary-color;
             color: white;
@@ -98,12 +105,6 @@ aside{
         .fonctio_info{
             @include vignette-title;
 
-        }
-        &:hover{
-            background-color: lighten($primary-color, 35%);
-            .fonctio_icon{
-                color: $primary-color;
-                }
         }
     }    
 }
@@ -137,18 +138,28 @@ main{
         "menu1 menu2"
         "menu3 menu4";
         grid-gap: 20px;
-    }
-    h1{
-        @include title;
+        grid-template-columns: 40% 40%;
+
     }
     .resto-select{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 300px;
         width: 100%;
         background-color: white;
+        position: relative;
         @include box-shadow;
         border-radius: 20px;
         @include margin-bottom;
         color: black;
+        transition: 500ms;
+        cursor: pointer;
+        &:hover{  
+            transform: scale(1.05);
+            box-shadow: 7px 7px 10px $dark-grey;
+            
+        }
         .resto-select_new{
             z-index: 4;
             position: absolute;
@@ -170,26 +181,27 @@ main{
             @include flex-row;
             padding: 10px;
             height: 50px;
+            .resto_select-like_btn{
+                position: relative;
+                @include heart;
+                right: 35px;
+                bottom: 30px;
+                background-color: none;
+                border: none;
+                cursor: pointer;
+            }
             .resto-select_title{
                 @include flex-column;
                 width: 260px;
                 .resto-select_name{
                     @include vignette-title;
-                    margin: 10px 0 0 0;
+                    margin: -20px 0 0 0;
                 }
                 .resto-select_location{
-                    margin: 0 0 10px 0;
+                    margin: 10px 0 0 0;
                     font-size: 18px;
                     font-family: robotothin;
                     font-weight: bold;
-                }
-            }
-            .fa-heart{
-                font-size: 25px;
-                padding-right: 20px;
-                z-index: 3;
-                &:hover{
-                    background-image: linear-gradient(to top right, $secondary-color, $primary-color);
                 }
             }
         }

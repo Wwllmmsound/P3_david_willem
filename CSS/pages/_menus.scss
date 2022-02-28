@@ -16,31 +16,141 @@
     padding-bottom: -100px;
     border-radius: 50px 50px 0 0;
     min-height: 1450px;
+    @include laptop-size{
+        display: grid;
+        grid-template-areas:
+        ". resto-name resto-name"
+        "entree main dessert"
+        ". button ."
+        ". . .";
+        grid-template-rows: -500px 500px 100px -300px;
+        grid-template-columns: 33% 33% 33%;
+        max-height: 900px;
+    }
     .resto-name{
         @include flex-row;
         padding: $padding;
+        grid-area: resto-name;
         h1{
             font-family: shrikhand;
+            animation: slideDown 1000ms forwards cubic-bezier(1,.24,.34,.92);
+            @include laptop-size{
+                font-size: 40px;
+            }
         }
-        i{
-            font-size: 30px;
+        .heart{
+            @include heart;
             margin-right: 35px;
+            position: relative;
+            bottom: 20px;
+            right: 20px;
+            animation: spin 500ms linear;
+        }
+        @keyframes slideDown {
+            0%{
+                transform: perspective(20px) rotateX(20deg) translateY(-100%);
+            }
+            
+            100%{
+                transform: perspective(0px) rotateX(0deg) translateY(0%) ;
+            }
         }
     }
-    input[type="radio"]{
-        appearance: none;
-        &:hover{
-            .menu-choice_details{
-                display: inline;
-                background-color: lighten($tertiary-color, 10%);
+    @keyframes slideRight {
+        0%{
+            transform: scale(0) translateX(-100%);
+        }
+        50%{
+            transform: scale(0.5) translateX(50%);
+        }
+        100%{
+            transform: scale(1) translateX(0%) ;
+        }
+    }
+    .menu-type_entree{
+        animation: slideRight 800ms forwards cubic-bezier(1,.24,.34,.92);
+        grid-area: entree;
+    }
+    .menu-type_main{
+        animation: slideRight 800ms 500ms both cubic-bezier(1,.24,.34,.92);
+        grid-area: main;
+    }
+    .menu-type_dessert{
+        animation: slideRight 800ms 1000ms both cubic-bezier(1,.24,.34,.92);
+        grid-area: dessert;
+    }
+    .menu-type_entree, .menu-type_main, .menu-type_dessert{
+        input[type="checkbox"]{
+            display: none;
+            &:checked + .menu-choices > .menu-choice_selected{
+                animation: selected 1000ms cubic-bezier(.16,.82,0,1.02) forwards;
+            }
+            &:checked + .menu-choices > .menu-choice_selected > .fa-check-circle{
+                animation: spin 1000ms 100ms cubic-bezier(.16,.82,0,1.02) forwards;
+            }
+            &:not(:checked) + .menu-choices > .menu-choice_selected{
+                animation: un-selected 1000ms cubic-bezier(.16,.82,0,1.02) forwards;
+            }
+            &:not(:checked) + .menu-choices > .menu-choice_selected > .fa-check-circle{
+                animation: un-spin 1000ms 100ms cubic-bezier(.16,.82,0,1.02) forwards;
             }
         }
-        &:focus{
-            .menu-choice_selected{
-                display: inline;
+        .menu-choice_selected{
+            @include flex-row;
+            justify-content: center;
+            position: relative;
+            background-color: $tertiary-color;
+            z-index: 1;
+            width: 90px;
+            height: 80px;
+            border-radius: 0 20px 20px 0;
+            margin-right: -80px;
+            @keyframes selected {
+                from{
+                    transform: scaleX(0);
+                    margin-right: -80px;
+                    transform-origin: 100%;
+                }
+                to{
+                    transform: scaleX(1);
+                    margin-right: 0px;
+                }
+            }
+            @keyframes un-selected {
+                from{
+                    transform: scaleX(1);
+                    margin-right: 0px;
+                    }
+                    to{
+                        transform: scaleX(0);
+                        margin-right: -80px;
+                        transform-origin: 100%;
+                    }
+                }
+                
+            .fa-check-circle{
+                color: white;
+                font-size: 28px;
+                z-index: 2;
+                
+                @keyframes spin{
+                    from {
+                        transform: rotate(200deg);
+                    }
+                    to {
+                        transform: rotate(0deg);
+                    }
+                }
+                @keyframes un-spin{
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(200deg);
+                    }
+                }
             }
         }
-
     }
     .menu-type{
         padding: $padding;
@@ -55,48 +165,63 @@
             margin-top: -15px;
         }
         .menu-choices{
+            position: relative;
+            overflow: hidden;
             @include flex-row;
+            justify-content: space-between;
             background-color: white;
             border-radius: 20px;
             @include box-shadow;
-            width: 100%;
+            width: 99%;
             height: 80px;
-            margin-top: 20px;
+            margin-top: 15px;
             .menu-choice_details{
-                padding-left: 10px;
-                width: 80%;
-                h4{
-                    position: relative;
-                    top: 8px;
-                    font-size: 22px;
+                position: relative;
+                left: 10px;
+                min-width: 70%;
+                max-width: 70%;
+                &:nth-child(1){ 
+                    font-size: 1rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    @include tablet-size{
+                        font-size: 24px;
+                    }
+                    @include laptop-size{
+                        font-size: 20px;
+                    }
                 }
-                p{
+                &:nth-child(2){
                     position: relative;
-                    bottom: 14px;
+                    bottom: 10px;
                     font-family: robotothin;
-                    font-size: 18px;
-                    font-weight: bold;
+                    font-size: 0.7rem;
+                    font-weight:lighter;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    @include tablet-size{
+                        font-size: 20px;
+                    }
+                    @include laptop-size{
+                        font-size: 16px;
+                    }
                 }
             }
             .menu-choice_price{
-                margin-top: 40px;
-                margin-right: 20px;
-            }
-            .menu-choice_selected{
-                background-color: $tertiary-color;
-                z-index: 4;
-                min-width: 70px;
-                height: 80px;
-                border-radius: 0 20px 20px 0;
-                color: white;
-                display: none;
+                margin-top: 35px;
+                margin-right: 0;
+                padding-right: 0;
+                margin-left: 8px;
+                min-width: 36px;
+                justify-content: flex-end;
+                font-size: 1.1rem;
+                font-weight: bold;
             }
         }
     }
-    .order-btn{
-        @include button;
-        @include flex-column;
-        margin: 30px 0 50px 28%;
-        padding: 20px 60px;
+    .menu_btn{
+        grid-area: button;
     }
 }

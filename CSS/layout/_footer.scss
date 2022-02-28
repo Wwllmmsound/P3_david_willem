@@ -9,7 +9,7 @@ footer{
     align-items: flex-start;
     background-color: $dark-grey;
     padding: $padding;
-    margin-bottom: 0;
+    margin-bottom: -10px;
     @include tablet-size{
         flex-direction: row;
         padding-right: 20px;

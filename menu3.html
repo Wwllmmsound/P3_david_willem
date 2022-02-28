@@ -10,144 +10,151 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./assets/ohmyfood.png" alt="logo"></a>
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <img src="./assets/ohmyfood.png" alt="logo">
     </header>
     <div class="subheader-img-3"></div>
     <form action="#" class="menu-form">
         <div class="resto-name">
             <h1>À la française</h1>
-            <i class="far fa-heart"></i>
+            <div class="heart">
+                <img class="heart_empty" src="./assets/heart-empty.png" alt="empty heart">
+                <img class="heart_full" src="./assets/heart-full.png" alt="full heart">
+            </div>
         </div>
-        <div class="menu-type">
+        <div class="menu-type menu-type_entree">
             <h3 class="menu-type_title">ENTRÉES</h3>
             <div class="menu-type_title_underline"></div>
-                <input type="radio" name="entree" value="entree-1st-choice" id="entree-1st-choice">
-                <label class="menu-choices" for="entree-1st-choice">
-                    <div class="menu-choice_details">
-                        <h4>Tartare de poulpe acidulé</h4>
-                        <p>Au zests d'orange</p>
-                    </div>
+            <input type="checkbox" name="entree" value="entree-1st-choice" id="entree-1st-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="entree-1st-choice">
+                        <strong>Tartare de poulpe acidulé</strong><br>
+                        <span>Au zests d'orange</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>25€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-                <input type="radio" name="entree" value="entree-2nd-choice" id="entree-2nd-choice">
-                <label class="menu-choices" for="entree-2nd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Velouté de légumes d'antan</h4>
-                        <p>Carotte, panais, topinambour</p>
-                    </div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>   
+                </section>
+                <input type="checkbox" name="entree" value="entree-2nd-choice" id="entree-2nd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="entree-2nd-choice">
+                        <strong>Velouté de légumes d'antan</strong><br>
+                        <span>Carotte, panais, topinambour</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>35€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-                <input type="radio" name="entree" value="entree-3rd-choice" id="entree-3rd-choice">
-                <label class="menu-choices" for="entree-3rd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Soupe à l'oignon</h4>
-                        <p>Revisitée</p>
-                    </div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>   
+                </section>
+                <input type="checkbox" name="entree" value="entree-3rd-choice" id="entree-3rd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="entree-3rd-choice">
+                        <strong>Soupe à l'oignon</strong><br>
+                        <span>Revisitée</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>20€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fas fa-check-circle"></i>
                     </div>
-                </label>
+                    
+                </section>
             </div>
-            <div class="menu-type">
+            <div class="menu-type menu-type_main">
                 <h3 class="menu-type_title">PLATS</h3>
                 <div class="menu-type_title_underline"></div>
-                <input type="radio" name="main" value="main-1st-choice" id="main-1st-choice">
-                <label class="menu-choices" for="main-1st-choice">
-                    <div class="menu-choice_details">
-                        <h4>Coquilles Saint-Jacques</h4>
-                        <p>Accompagnées d'une purée de panais</p>
-                    </div>
+                <input type="checkbox" name="main" value="main-1st-choice" id="main-1st-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="main-1st-choice">
+                        <strong>Coquilles Saint-Jacques</strong><br>
+                        <span>Accompagnées d'une purée de panais</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>40€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-                <input type="radio" name="main" value="main-2nd-choice" id="main-2nd-choice">
-                <label class="menu-choices" for="main-2nd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Magret de canard</h4>
-                        <p>Et parmentier de pommes de terres</p>
-                    </div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>   
+                </section>
+                <input type="checkbox" name="main" value="main-2nd-choice" id="main-2nd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="main-2nd-choice">
+                        <strong>Magret de canard</strong><br>
+                        <span>Et parmentier de pommes de terres</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>35€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-                <input type="radio" name="main" value="main-3rd-choice" id="main-3rd-choice">
-                <label class="menu-choices" for="main-3rd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Pigeonneau d'Ille-et-Vilaine</h4>
-                        <p>Sur son lit de gnocchis aux légumes</p>
-                    </div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>   
+                </section>
+                <input type="checkbox" name="main" value="main-3rd-choice" id="main-3rd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="main-3rd-choice">
+                        <strong>Pigeonneau d'Ille-et-Vilaine</strong><br>
+                        <span>Sur son lit de gnocchis aux légumes</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>44€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fas fa-check-circle"></i>
                     </div>
-                </label>
+                </section>
             </div>
-            <div class="menu-type">
+            <div class="menu-type menu-type_dessert">
                 <h3 class="menu-type_title">DESSERTS</h3>
                 <div class="menu-type_title_underline"></div>
-                <input type="radio" name="dessert" value="dessert-1st-choice" id="dessert-1st-choice">
-                <label class="menu-choices" for="dessert-1st-choice">
-                    <div class="menu-choice_details">
-                        <h4>Pétales de violettes glacés</h4>
-                        <p>Et purée de noisettes</p>
-                    </div>
+                <input type="checkbox" name="dessert" value="dessert-1st-choice" id="dessert-1st-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="dessert-1st-choice">
+                        <strong>Pétales de violettes glacés</strong><br>
+                        <span>Et purée de noisettes</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>18€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fas fa-check-circle"></i>
                     </div>
-                </label>
-                <input type="radio" name="dessert" value="dessert-2nd-choice" id="dessert-2nd-choice">
-                <label class="menu-choices" for="dessert-2nd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Fondant au chocolat</h4>
-                        <p>Revisité</p>
-                    </div>
+                </section>
+                <input type="checkbox" name="dessert" value="dessert-2nd-choice" id="dessert-2nd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="dessert-2nd-choice">
+                        <strong>Fondant au chocolat</strong><br>
+                        <span>Revisité</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>22€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-                <input type="radio" name="dessert" value="dessert-3rd-choice" id="dessert-3rd-choice">
-                <label class="menu-choices" for="dessert-3rd-choice">
-                    <div class="menu-choice_details">
-                        <h4>Millefeuille croustillant</h4>
-                        <p>Myrtilles et pâte d'amande</p>
-                    </div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>                   
+                </section>
+                <input type="checkbox" name="dessert" value="dessert-3rd-choice" id="dessert-3rd-choice">
+                <section class="menu-choices">
+                    <label class="menu-choice_details" for="dessert-3rd-choice">
+                        <strong>Millefeuille croustillant</strong><br>
+                        <span>Myrtilles et pâte d'amande</span>
+                    </label>
                     <div class="menu-choice_price">
                         <p>23€</p>
                     </div>
                     <div class="menu-choice_selected">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
+                        <i class="fas fa-check-circle"></i>
+                    </div>                    
+                </section>
             </div>
-        <button type="submit" class="order-btn">Commander</button>
+            <div class="menu_btn">
+                <button type="submit" class="order-btn">Commander</button>
+            </div>
     </form>
     <footer>
         <img src="./assets/ohmyfood.png" alt="logo" class="img_footer">
@@ -160,7 +167,7 @@
             <span> Devenir Partenaire</span>
         </a>
         <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a href="mailto:willemdav92@yahoo.fr">Contact</a>
     </footer>
 </body>
 </html>
