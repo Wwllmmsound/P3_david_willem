@@ -1409,7 +1409,7 @@ a {
   width: 90px;
   height: 80px;
   border-radius: 0 20px 20px 0;
-  margin-right: -80px;
+  margin-right: -70px;
 }
 
 @-webkit-keyframes selected {
@@ -1550,6 +1550,12 @@ a {
   margin-top: -15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .menu-form .menu-type .menu-type_title_underline {
+    margin-top: -35px;
+  }
+}
+
 .menu-form .menu-type .menu-choices {
   position: relative;
   overflow: hidden;
@@ -1576,7 +1582,7 @@ a {
   position: relative;
   left: 10px;
   min-width: 70%;
-  max-width: 70%;
+  max-width: 90%;
 }
 
 .menu-form .menu-type .menu-choices .menu-choice_details:nth-child(1) {
@@ -1622,6 +1628,9 @@ a {
 }
 
 .menu-form .menu-type .menu-choices .menu-choice_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 35px;
   margin-right: 0;
   padding-right: 0;

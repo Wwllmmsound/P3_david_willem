@@ -104,7 +104,7 @@
             width: 90px;
             height: 80px;
             border-radius: 0 20px 20px 0;
-            margin-right: -80px;
+            margin-right: -70px;
             @keyframes selected {
                 from{
                     transform: scaleX(0);
@@ -163,6 +163,9 @@
             height: 4px;
             background-color: $tertiary-color;
             margin-top: -15px;
+            @include laptop-size{
+                margin-top: -35px;
+            }
         }
         .menu-choices{
             position: relative;
@@ -179,7 +182,7 @@
                 position: relative;
                 left: 10px;
                 min-width: 70%;
-                max-width: 70%;
+                max-width: 90%;
                 &:nth-child(1){ 
                     font-size: 1rem;
                     text-overflow: ellipsis;
@@ -210,6 +213,7 @@
                 }
             }
             .menu-choice_price{
+                display: flex;
                 margin-top: 35px;
                 margin-right: 0;
                 padding-right: 0;

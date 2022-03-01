@@ -39,11 +39,6 @@
             animation: empty-heart 1500ms cubic-bezier(.1,1.32,.54,.82) forwards;
         }
     }
-    // &:active{
-    //     .heart_full{
-    //         animation: full-heart 1500ms cubic-bezier(.1,1.32,.54,.82) forwards;
-    //     }
-    // }
     .heart_empty{
         position: absolute;
         height: 35px;
