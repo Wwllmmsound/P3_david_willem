@@ -1581,7 +1581,7 @@ a {
 .menu-form .menu-type .menu-choices .menu-choice_details {
   position: relative;
   left: 10px;
-  min-width: 70%;
+  width: 80%;
   max-width: 90%;
 }
 
